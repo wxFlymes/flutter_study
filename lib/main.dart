@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/WXHomePage.dart';
 import 'package:flutter_app/WXStateManagerPage.dart';
-import 'package:flutter_app/WXTextViewPage.dart';
+
+//foundation
+import 'package:flutter_app/foundation/WXButtonPage.dart';
+import 'package:flutter_app/foundation/WXCheckBoxPage.dart';
+import 'package:flutter_app/foundation/WXIconPage.dart';
+import 'package:flutter_app/foundation/WXRadioPage.dart';
+import 'package:flutter_app/foundation/WXSwitchPage.dart';
+import 'package:flutter_app/foundation/WXTextViewPage.dart';
 
 
 void main() => runApp(WXApplication());
@@ -37,7 +44,12 @@ class _WXApplicationState extends State<WXApplication>{
       routes: <String,WidgetBuilder>{
         '/':(context) => WXHomePage(),
         '/stateManager':(context) => WXStateMangerPage(),
-        '/textView':(context) => WXTextViewPage()
+        '/textView':(context) => WXTextViewPage(),
+        '/buttonPage':(context) => WXButtonPage(),
+        '/checkBoxPage':(context) => WXCheckBoxPage(),
+        '/iconPage':(context) => WXIconPage(),
+        '/radioPage':(context) => WXRadioPage(),
+        '/switchPage':(context) => WXSwitchPage(),
       },
     );
     return app;
