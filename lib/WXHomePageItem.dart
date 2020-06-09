@@ -40,6 +40,7 @@ class WXHomePageItemFactory {
                         child: Text('单选框'),
                         onPressed: (){
                             debugPrint('');
+                            Navigator.pushNamed(context, '/radioPage');
                         },
                     ),
                     RaisedButton(

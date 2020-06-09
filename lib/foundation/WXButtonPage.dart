@@ -80,10 +80,14 @@ class WXButtonPageState extends State<WXButtonPage>{
                 ),
                 IconButton(
                     icon: Icon(Icons.thumb_up), 
-                    onPressed: null,
+                    onPressed: (){
+
+                    },
                 ),
                 OutlineButton(
-                    onPressed: null,
+                    onPressed: (){
+
+                    },
                 )
             ],
         ),
