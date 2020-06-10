@@ -16,6 +16,7 @@ class WXRadioPage extends StatefulWidget {
 
 class WXRadioPageState extends State<WXRadioPage>{
     int gener = 0;
+    bool switchValue = true;
     @override
     void initState() {
     // TODO: implement initState
@@ -70,7 +71,14 @@ class WXRadioPageState extends State<WXRadioPage>{
                         },
                         title: Text('未知'),
                     ),
-                    
+                    Switch(
+                        value: switchValue,
+                        onChanged: (value){
+                            setState(() {
+                              switchValue = !switchValue;
+                            });
+                        },
+                    ),
                     
                 ],
             ),

@@ -7,7 +7,7 @@ class WXCheckBoxPage extends StatefulWidget {
     @override
     State<StatefulWidget> createState() {
     // TODO: implement createState
-        return null;
+        return WXCheckBoxPageState();
     }
 }
 
@@ -22,7 +22,27 @@ class WXCheckBoxPageState extends State<WXCheckBoxPage>{
     @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return null;
+    return Scaffold(
+        appBar: AppBar(
+            title: Text('复选框'),
+        ),
+        body: Column(
+            children: <Widget>[
+                CheckboxListTile(
+                    value: true, 
+                    onChanged: (value){
+
+                    },
+                ),
+                Checkbox(
+                    value: false, 
+                    onChanged: (value){
+                        
+                    }
+                )
+            ],
+        ),
+    );
   }
     
 }

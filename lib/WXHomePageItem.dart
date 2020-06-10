@@ -47,12 +47,14 @@ class WXHomePageItemFactory {
                         child: Text('复选框'),
                         onPressed: (){
                             debugPrint('');
+                            Navigator.pushNamed(context, '/checkBoxPage');
                         },
                     ),
                     RaisedButton(
                         child: Text('输入框'),
                         onPressed: (){
                             debugPrint('');
+                            Navigator.pushNamed(context, '/inputPage');
                         },
                     ),
                     RaisedButton(

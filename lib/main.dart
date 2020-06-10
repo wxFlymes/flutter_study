@@ -9,6 +9,7 @@ import 'package:flutter_app/foundation/WXIconPage.dart';
 import 'package:flutter_app/foundation/WXRadioPage.dart';
 import 'package:flutter_app/foundation/WXSwitchPage.dart';
 import 'package:flutter_app/foundation/WXTextViewPage.dart';
+import 'package:flutter_app/foundation/WXInputFieldPage.dart';
 
 
 void main() => runApp(WXApplication());
@@ -50,6 +51,7 @@ class _WXApplicationState extends State<WXApplication>{
         '/iconPage':(context) => WXIconPage(),
         '/radioPage':(context) => WXRadioPage(),
         '/switchPage':(context) => WXSwitchPage(),
+        '/inputPage':(context) => WXInputFieldPage(),
       },
     );
     return app;
