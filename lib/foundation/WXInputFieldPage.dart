@@ -52,6 +52,7 @@ class WXInputFieldState extends State<WXInputFieldPage> {
                     obscureText: true,
                 ),
                 TextField(
+                    //autofocus: true,
                     controller: textController,
                     focusNode: node2,
                     decoration: InputDecoration(

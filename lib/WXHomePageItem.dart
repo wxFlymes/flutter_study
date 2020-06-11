@@ -61,12 +61,14 @@ class WXHomePageItemFactory {
                         child: Text('表单'),
                         onPressed: (){
                             debugPrint('');
+                            Navigator.pushNamed(context, '/formPage');
                         },
                     ),
                     RaisedButton(
                         child: Text('进度条'),
                         onPressed: (){
                             debugPrint('');
+                            Navigator.pushNamed(context, '/progressPage');
                         },
                     ),
                 ],

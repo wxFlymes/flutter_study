@@ -5,11 +5,14 @@ import 'package:flutter_app/WXStateManagerPage.dart';
 //foundation
 import 'package:flutter_app/foundation/WXButtonPage.dart';
 import 'package:flutter_app/foundation/WXCheckBoxPage.dart';
+import 'package:flutter_app/foundation/WXFormPage.dart';
 import 'package:flutter_app/foundation/WXIconPage.dart';
+import 'package:flutter_app/foundation/WXProgressPage.dart';
 import 'package:flutter_app/foundation/WXRadioPage.dart';
 import 'package:flutter_app/foundation/WXSwitchPage.dart';
 import 'package:flutter_app/foundation/WXTextViewPage.dart';
 import 'package:flutter_app/foundation/WXInputFieldPage.dart';
+
 
 
 void main() => runApp(WXApplication());
@@ -52,6 +55,8 @@ class _WXApplicationState extends State<WXApplication>{
         '/radioPage':(context) => WXRadioPage(),
         '/switchPage':(context) => WXSwitchPage(),
         '/inputPage':(context) => WXInputFieldPage(),
+        '/formPage':(context) => WXFormPage(),
+        '/progressPage':(context) => WXProgressPage(),
       },
     );
     return app;
