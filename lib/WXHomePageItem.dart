@@ -2,15 +2,15 @@
 import 'package:flutter/material.dart';
 
 class WXHomePageItemFactory {
-    int _index = 0;
+    int index = 0;
     BuildContext context;
     WXHomePageItemFactory({@required int index}) {
-        _index = index;
+        index = index;
     }
 
     Widget getPageItem() {
         Widget tmpWidget = null;
-        if (_index == 0) {
+        if (index == 0) {
             tmpWidget = ListView(
                 scrollDirection: Axis.vertical,
                 physics: ScrollPhysics(),
@@ -73,12 +73,19 @@ class WXHomePageItemFactory {
                     ),
                 ],
             );
-        } else if (_index == 1) {
+        } else if (index == 1) {
             tmpWidget = ListView(
                 scrollDirection: Axis.vertical,
                 physics: ScrollPhysics(),
                 controller: ScrollController(),
                 children: <Widget>[
+                    RaisedButton(
+                        child: Text('Padding'),
+                        onPressed: (){
+                            debugPrint('');
+                            Navigator.pushNamed(context, '/paddingPage');
+                        },
+                    ),
                     RaisedButton(
                         child: Text('Flex'),
                         onPressed: (){
@@ -111,7 +118,7 @@ class WXHomePageItemFactory {
                     ),
                 ],
             );
-        } else if (_index == 2) {
+        } else if (index == 2) {
             tmpWidget = ListView(
                 scrollDirection: Axis.vertical,
                 physics: ScrollPhysics(),
@@ -120,19 +127,21 @@ class WXHomePageItemFactory {
                     RaisedButton(
                         child: Text('Padding'),
                         onPressed: (){
-                            debugPrint('');
+                            debugPrint('padding');
                         },
                     ),
                     RaisedButton(
                         child: Text('ConstraitBox/SizedBox'),
                         onPressed: (){
-                            debugPrint('');
+                            debugPrint('ConstraitBox');
+                            Navigator.pushNamed(context, '/constraitBoxPage');
                         },
                     ),
                     RaisedButton(
                         child: Text('DecoratedBox'),
                         onPressed: (){
-                            debugPrint('');
+                            debugPrint('deccorated');
+                            Navigator.pushNamed(context, '/decoratedPage');
                         },
                     ),
                     RaisedButton(
@@ -155,7 +164,7 @@ class WXHomePageItemFactory {
                     ),
                 ],
             );
-        } else if (_index == 3) {
+        } else if (index == 3) {
             tmpWidget = ListView(
                 scrollDirection: Axis.vertical,
                 physics: ScrollPhysics(),

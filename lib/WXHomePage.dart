@@ -17,14 +17,15 @@ class WXHomePage extends StatefulWidget{
 
 class _WXHomePageState extends State<WXHomePage>{
 
-    int _currentIndex = null;
-    WXHomePageItemFactory fac = null;
+    int _currentIndex = 0;
+    WXHomePageItemFactory fac = WXHomePageItemFactory(index: 0);
     Widget _body = null;
 
 
     void _selectAction(int index){
         setState(() {
             _currentIndex = index;
+            fac.index = index;
             _body = fac.getPageItem();
         });
     }

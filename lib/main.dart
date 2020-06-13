@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/WXHomePage.dart';
 import 'package:flutter_app/WXStateManagerPage.dart';
+import 'package:flutter_app/container/WXConstraitBoxPage.dart';
+import 'package:flutter_app/container/WXDecoratedBoxPage.dart';
+import 'package:flutter_app/container/WXPaddingPage.dart';
 
 //foundation
 import 'package:flutter_app/foundation/WXButtonPage.dart';
@@ -13,9 +16,16 @@ import 'package:flutter_app/foundation/WXSwitchPage.dart';
 import 'package:flutter_app/foundation/WXTextViewPage.dart';
 import 'package:flutter_app/foundation/WXInputFieldPage.dart';
 
+//layout
 
 
-void main() => runApp(WXApplication());
+//container
+
+
+
+void main(){
+    return runApp(WXApplication());
+}
 
 class WXApplication extends StatefulWidget {
   // This widget is the root of your application.
@@ -47,6 +57,7 @@ class _WXApplicationState extends State<WXApplication>{
       initialRoute: '/',
       routes: <String,WidgetBuilder>{
         '/':(context) => WXHomePage(),
+        //foundation
         '/stateManager':(context) => WXStateMangerPage(),
         '/textView':(context) => WXTextViewPage(),
         '/buttonPage':(context) => WXButtonPage(),
@@ -57,6 +68,11 @@ class _WXApplicationState extends State<WXApplication>{
         '/inputPage':(context) => WXInputFieldPage(),
         '/formPage':(context) => WXFormPage(),
         '/progressPage':(context) => WXProgressPage(),
+        //container
+        '/paddingPage':(context) => WXPaddinPage(),
+        '/constraitBoxPage':(context) => WXConstraitBoxPage(),
+        '/decoratedPage':(context) => WXDecoratedBoxPage(),
+        //layout
       },
     );
     return app;
