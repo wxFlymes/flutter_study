@@ -148,12 +148,14 @@ class WXHomePageItemFactory {
                         child: Text('Transform'),
                         onPressed: (){
                             debugPrint('');
+                            Navigator.pushNamed(context, '/transformPage');
                         },
                     ),
                     RaisedButton(
                         child: Text('Container'),
                         onPressed: (){
                             debugPrint('');
+                            Navigator.pushNamed(context, '/containerPage');
                         },
                     ),
                     RaisedButton(
@@ -208,7 +210,46 @@ class WXHomePageItemFactory {
                     ),
                 ],
             );
-        } else {
+        } 
+        else if (index == 4) {
+            tmpWidget = ListView(
+                scrollDirection: Axis.vertical,
+                physics: ScrollPhysics(),
+                controller: ScrollController(),
+                children: <Widget>[
+                    RaisedButton(
+                        child: Text('singgle'),
+                        onPressed: (){
+                            debugPrint('singgle');
+                            Navigator.pushNamed(context, '/singleScrollPage');
+                        },
+                    ),
+                    RaisedButton(
+                        child: Text('listview'),
+                        onPressed: (){
+                            debugPrint('ConstraitBox');
+                            
+                        },
+                    ),
+                    RaisedButton(
+                        child: Text('gridview'),
+                        onPressed: (){
+                            debugPrint('deccorated');
+                            
+                        },
+                    ),
+                    RaisedButton(
+                        child: Text('customscroll'),
+                        onPressed: (){
+                            debugPrint('');
+                            
+                        },
+                    ),
+                    
+                ],
+            );
+        }
+        else {
             print('the index out of range!');
         }
         return tmpWidget;

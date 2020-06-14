@@ -82,11 +82,22 @@ class _WXHomePageState extends State<WXHomePage>{
                             ),
                         )
                     ),
+                    
                     BottomNavigationBarItem(
                         icon: Icon(Icons.access_time,
                             color: Colors.blue,
                         ),
                         title: Text('功能',
+                            style: TextStyle(
+                                color: Colors.blue,
+                            ),
+                        )
+                    ),
+                    BottomNavigationBarItem(
+                        icon: Icon(Icons.person,
+                            color: Colors.blue,
+                        ),
+                        title: Text('滚动',
                             style: TextStyle(
                                 color: Colors.blue,
                             ),
