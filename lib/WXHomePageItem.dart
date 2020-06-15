@@ -221,6 +221,8 @@ class WXHomePageItemFactory {
                         child: Text('singgle'),
                         onPressed: (){
                             debugPrint('singgle');
+                            //MaterialPageRoute
+                            //Notification
                             Navigator.pushNamed(context, '/singleScrollPage');
                         },
                     ),

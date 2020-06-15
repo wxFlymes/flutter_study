@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 
 class WXRadioPage extends StatefulWidget {
@@ -39,6 +40,7 @@ class WXRadioPageState extends State<WXRadioPage>{
                             value: 0, 
                             groupValue: gener, 
                             onChanged: (value){
+                                MNotification('哈哈哈').dispatch(context);
                                 setState(() {
                                   gener = 0;
                                 });
@@ -83,5 +85,13 @@ class WXRadioPageState extends State<WXRadioPage>{
                 ],
             ),
         );
+    }
+}
+
+class MNotification extends Notification{
+    MNotification(this.message);
+    final String message;
+    String toString(){
+        return this.message;
     }
 }
